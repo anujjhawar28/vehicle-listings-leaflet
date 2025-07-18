@@ -1,3 +1,5 @@
+// File: stores/vehicleData.js
+
 export default [
   {
     id: "v-001",
@@ -7,13 +9,14 @@ export default [
     type: "Truck",
     location: { lat: 25.276987, lng: 55.296249 },
     lastUpdated: "2025-07-02T10:30:00Z",
-    lastLocation: "Dubai, UAE",
+    lastLocation: "Sheikh Zayed Road, Dubai",
     history: [
-      { lat: 25.2769, lng: 55.2961, timestamp: "2025-07-02T09:30:00Z" },
-      { lat: 25.2775, lng: 55.297, timestamp: "2025-07-02T09:45:00Z" },
-      { lat: 25.2783, lng: 55.298, timestamp: "2025-07-02T10:00:00Z" },
-      { lat: 25.276987, lng: 55.296249, timestamp: "2025-07-02T10:30:00Z" },
-    ],
+      { lat: 25.2100, lng: 55.2700, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.2200, lng: 55.2750, timestamp: "2025-07-02T08:30:00Z" },
+      { lat: 25.2500, lng: 55.2800, timestamp: "2025-07-02T09:00:00Z" },
+      { lat: 25.2700, lng: 55.2900, timestamp: "2025-07-02T09:30:00Z" },
+      { lat: 25.276987, lng: 55.296249, timestamp: "2025-07-02T10:30:00Z" }
+    ]
   },
   {
     id: "v-002",
@@ -21,14 +24,16 @@ export default [
     plate: "XYZ-789",
     status: "alert",
     type: "Van",
-    location: { lat: 25.2048, lng: 55.2708 },
+    location: { lat: 25.3548, lng: 55.4048 },
     lastUpdated: "2025-07-02T10:45:00Z",
-    lastLocation: "Bur Dubai, UAE",
+    lastLocation: "Al Majaz, Sharjah",
     history: [
-      { lat: 25.2, lng: 55.265, timestamp: "2025-07-02T09:00:00Z" },
-      { lat: 25.202, lng: 55.268, timestamp: "2025-07-02T09:30:00Z" },
-      { lat: 25.2048, lng: 55.2708, timestamp: "2025-07-02T10:45:00Z" },
-    ],
+      { lat: 25.3400, lng: 55.3900, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.3450, lng: 55.3950, timestamp: "2025-07-02T08:30:00Z" },
+      { lat: 25.3500, lng: 55.4000, timestamp: "2025-07-02T09:00:00Z" },
+      { lat: 25.3525, lng: 55.4020, timestamp: "2025-07-02T09:30:00Z" },
+      { lat: 25.3548, lng: 55.4048, timestamp: "2025-07-02T10:45:00Z" }
+    ]
   },
   {
     id: "v-003",
@@ -36,14 +41,16 @@ export default [
     plate: "DEF-456",
     status: "offline",
     type: "Bus",
-    location: { lat: 25.1851, lng: 55.2604 },
+    location: { lat: 24.4539, lng: 54.3773 },
     lastUpdated: "2025-07-01T22:00:00Z",
-    lastLocation: "Al Nahda, UAE",
+    lastLocation: "Abu Dhabi Downtown",
     history: [
-      { lat: 25.1723, lng: 55.2501, timestamp: "2025-07-01T20:00:00Z" },
-      { lat: 25.1785, lng: 55.2555, timestamp: "2025-07-01T21:00:00Z" },
-      { lat: 25.1851, lng: 55.2604, timestamp: "2025-07-01T22:00:00Z" },
-    ],
+      { lat: 24.4400, lng: 54.3600, timestamp: "2025-07-01T18:00:00Z" },
+      { lat: 24.4450, lng: 54.3650, timestamp: "2025-07-01T19:00:00Z" },
+      { lat: 24.4485, lng: 54.3700, timestamp: "2025-07-01T20:00:00Z" },
+      { lat: 24.4510, lng: 54.3750, timestamp: "2025-07-01T21:00:00Z" },
+      { lat: 24.4539, lng: 54.3773, timestamp: "2025-07-01T22:00:00Z" }
+    ]
   },
   {
     id: "v-004",
@@ -51,13 +58,16 @@ export default [
     plate: "GHI-321",
     status: "online",
     type: "Mini Truck",
-    location: { lat: 25.2192, lng: 55.2825 },
+    location: { lat: 25.4092, lng: 55.4445 },
     lastUpdated: "2025-07-02T11:10:00Z",
-    lastLocation: "Deira, UAE",
+    lastLocation: "Ajman Corniche",
     history: [
-      { lat: 25.2141, lng: 55.278, timestamp: "2025-07-02T10:00:00Z" },
-      { lat: 25.2192, lng: 55.2825, timestamp: "2025-07-02T11:10:00Z" },
-    ],
+      { lat: 25.3950, lng: 55.4300, timestamp: "2025-07-02T08:30:00Z" },
+      { lat: 25.3980, lng: 55.4350, timestamp: "2025-07-02T09:30:00Z" },
+      { lat: 25.4010, lng: 55.4380, timestamp: "2025-07-02T10:00:00Z" },
+      { lat: 25.4050, lng: 55.4420, timestamp: "2025-07-02T10:30:00Z" },
+      { lat: 25.4092, lng: 55.4445, timestamp: "2025-07-02T11:10:00Z" }
+    ]
   },
   {
     id: "v-005",
@@ -65,82 +75,92 @@ export default [
     plate: "JKL-654",
     status: "offline",
     type: "Van",
-    location: { lat: 25.142, lng: 55.2298 },
+    location: { lat: 24.2075, lng: 55.7447 },
     lastUpdated: "2025-07-01T20:00:00Z",
-    lastLocation: "Al Quoz, UAE",
+    lastLocation: "Hili, Al Ain",
     history: [
-      { lat: 25.135, lng: 55.22, timestamp: "2025-07-01T18:00:00Z" },
-      { lat: 25.142, lng: 55.2298, timestamp: "2025-07-01T20:00:00Z" },
-    ],
+      { lat: 24.1900, lng: 55.7200, timestamp: "2025-07-01T17:00:00Z" },
+      { lat: 24.1950, lng: 55.7250, timestamp: "2025-07-01T18:00:00Z" },
+      { lat: 24.2000, lng: 55.7300, timestamp: "2025-07-01T18:30:00Z" },
+      { lat: 24.2050, lng: 55.7400, timestamp: "2025-07-01T19:00:00Z" },
+      { lat: 24.2075, lng: 55.7447, timestamp: "2025-07-01T20:00:00Z" }
+    ]
   },
-  {
+   {
     id: "v-006",
-    name: "Tanker Z9",
-    plate: "MNO-987",
+    name: "Tanker Gulf",
+    plate: "TGR-111",
     status: "alert",
     type: "Tanker",
-    location: { lat: 25.2761, lng: 55.296 },
-    lastUpdated: "2025-07-02T09:50:00Z",
-    lastLocation: "Business Bay, UAE",
+    location: { lat: 23.6345, lng: 55.9311 },
+    lastUpdated: "2025-07-02T07:30:00Z",
+    lastLocation: "Liwa Oasis",
     history: [
-      { lat: 25.27, lng: 55.29, timestamp: "2025-07-02T08:30:00Z" },
-      { lat: 25.2761, lng: 55.296, timestamp: "2025-07-02T09:50:00Z" },
-    ],
+      { lat: 23.6400, lng: 55.9000, timestamp: "2025-07-02T05:00:00Z" },
+      { lat: 23.6355, lng: 55.9200, timestamp: "2025-07-02T06:00:00Z" },
+      { lat: 23.6345, lng: 55.9311, timestamp: "2025-07-02T07:30:00Z" }
+    ]
   },
   {
     id: "v-007",
-    name: "SUV Patrol",
-    plate: "PRS-112",
+    name: "Crane Carrier",
+    plate: "CRA-552",
     status: "online",
-    type: "SUV",
-    location: { lat: 25.078, lng: 55.1385 },
-    lastUpdated: "2025-07-02T11:25:00Z",
-    lastLocation: "Jebel Ali, UAE",
+    type: "Heavy Vehicle",
+    location: { lat: 25.6840, lng: 55.9511 },
+    lastUpdated: "2025-07-02T11:00:00Z",
+    lastLocation: "Dhaid, Sharjah",
     history: [
-      { lat: 25.07, lng: 55.13, timestamp: "2025-07-02T10:30:00Z" },
-      { lat: 25.078, lng: 55.1385, timestamp: "2025-07-02T11:25:00Z" },
-    ],
+      { lat: 25.6500, lng: 55.9200, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.6600, lng: 55.9300, timestamp: "2025-07-02T09:00:00Z" },
+      { lat: 25.6700, lng: 55.9400, timestamp: "2025-07-02T10:00:00Z" },
+      { lat: 25.6840, lng: 55.9511, timestamp: "2025-07-02T11:00:00Z" }
+    ]
   },
   {
     id: "v-008",
-    name: "Truck Loader 2",
-    plate: "QWE-765",
+    name: "Medical Shuttle",
+    plate: "MED-888",
     status: "offline",
-    type: "Truck",
-    location: { lat: 25.3254, lng: 55.3901 },
-    lastUpdated: "2025-07-01T19:45:00Z",
-    lastLocation: "Sharjah Industrial Area",
+    type: "Bus",
+    location: { lat: 26.1056, lng: 56.0889 },
+    lastUpdated: "2025-07-01T23:00:00Z",
+    lastLocation: "Dibba, Fujairah",
     history: [
-      { lat: 25.31, lng: 55.38, timestamp: "2025-07-01T18:00:00Z" },
-      { lat: 25.3254, lng: 55.3901, timestamp: "2025-07-01T19:45:00Z" },
-    ],
+      { lat: 25.9500, lng: 56.0200, timestamp: "2025-07-01T20:00:00Z" },
+      { lat: 26.0000, lng: 56.0500, timestamp: "2025-07-01T21:00:00Z" },
+      { lat: 26.0500, lng: 56.0700, timestamp: "2025-07-01T22:00:00Z" },
+      { lat: 26.1056, lng: 56.0889, timestamp: "2025-07-01T23:00:00Z" }
+    ]
   },
   {
     id: "v-009",
-    name: "Van Express 9",
-    plate: "RTY-889",
+    name: "Road Sweeper",
+    plate: "RSW-321",
     status: "online",
-    type: "Van",
-    location: { lat: 25.2637, lng: 55.297 },
-    lastUpdated: "2025-07-02T10:55:00Z",
-    lastLocation: "Karama, UAE",
+    type: "Utility",
+    location: { lat: 24.9602, lng: 55.1188 },
+    lastUpdated: "2025-07-02T06:15:00Z",
+    lastLocation: "Ghantoot, Abu Dhabi",
     history: [
-      { lat: 25.25, lng: 55.285, timestamp: "2025-07-02T09:45:00Z" },
-      { lat: 25.2637, lng: 55.297, timestamp: "2025-07-02T10:55:00Z" },
-    ],
+      { lat: 24.9400, lng: 55.1000, timestamp: "2025-07-02T05:00:00Z" },
+      { lat: 24.9500, lng: 55.1100, timestamp: "2025-07-02T05:30:00Z" },
+      { lat: 24.9602, lng: 55.1188, timestamp: "2025-07-02T06:15:00Z" }
+    ]
   },
   {
     id: "v-010",
-    name: "Crane Carrier",
-    plate: "UIO-554",
+    name: "Emergency Unit",
+    plate: "EMU-001",
     status: "alert",
-    type: "Heavy Vehicle",
-    location: { lat: 25.121, lng: 55.2111 },
-    lastUpdated: "2025-07-02T08:20:00Z",
-    lastLocation: "Al Barsha, UAE",
+    type: "Ambulance",
+    location: { lat: 24.8230, lng: 55.0132 },
+    lastUpdated: "2025-07-02T04:45:00Z",
+    lastLocation: "Ruwais, Abu Dhabi",
     history: [
-      { lat: 25.115, lng: 55.2, timestamp: "2025-07-02T07:00:00Z" },
-      { lat: 25.121, lng: 55.2111, timestamp: "2025-07-02T08:20:00Z" },
-    ],
-  },
+      { lat: 24.8000, lng: 55.0000, timestamp: "2025-07-02T03:00:00Z" },
+      { lat: 24.8100, lng: 55.0080, timestamp: "2025-07-02T03:45:00Z" },
+      { lat: 24.8230, lng: 55.0132, timestamp: "2025-07-02T04:45:00Z" }
+    ]
+  }
 ];

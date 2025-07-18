@@ -17,7 +17,7 @@
         <label for="status-select">Filter</label>
       </FloatLabel>
     </div>
-    <div class="max-h-[80vh] overflow-auto">
+    <div class="max-h-[80vh] min-h-[80vh] overflow-auto">
       <DataView
         :value="filteredVehicles"
         :layout="'grid'"

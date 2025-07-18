@@ -1,32 +1,40 @@
 <template>
   <div style="height: 90vh; width: 50vw;">
-    <button @click="changeIcon">New kitten icon</button>
-    <l-map
+    <LMap
       v-model="zoom"
       v-model:zoom="zoom"
-      :center="[47.41322, -1.219482]"
+      :center="getCenterMap"
       @move="log('move')"
     >
-      <l-tile-layer
+      <LTileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      ></l-tile-layer>
-      <l-control-layers />
-      <l-marker :lat-lng="[0, 0]" draggable @moveend="log('moveend')">
-        <l-tooltip>
-          lol
-        </l-tooltip>
-      </l-marker>
-
-      <l-marker :lat-lng="[47.41322, -1.219482]">
-      </l-marker>
-
-      <l-marker :lat-lng="[50, 50]" draggable @moveend="log('moveend')">
-        <l-popup>
-          lol
+      />
+      <LControlLayers />
+      <LMarker v-for="(vehicle, key) in getVehicles" :key="key" :lat-lng="[vehicle.location?.lat ?? 0, vehicle.location?.lng ?? 0]">
+      <LIcon>
+        <GreenMarker v-if="vehicle.status === 'online'" />
+        <GrayMarker v-else-if="vehicle.status === 'offline'" />
+        <RedMarker v-else-if="vehicle.status === 'alert'" />
+      </LIcon>
+        <l-popup class="w-full">
+         <div class="w-72 mr-6 flex items-center gap-4">
+          <div>
+            <span class="font-bold">Vehicle Name:</span> 
+              {{vehicle.name}}
+            <br />
+            <span class="font-bold">Vehicle Plate:</span> 
+              {{vehicle.plate}}
+            <br />
+            <span class="font-bold">Vehicle Status:</span> 
+              {{vehicle.status}}
+            <br />
+           </div>
+           <Button label="View History" icon="pi pi-eye"  size="small" severity="info" variant=""  />
+         </div>
         </l-popup>
-      </l-marker>
+      </LMarker>
 
-      <l-polyline
+      <!-- <l-polyline
         :lat-lngs="[
           [47.334852, -1.509485],
           [47.342596, -1.328731],
@@ -66,58 +74,45 @@
         <l-popup>
           lol
         </l-popup>
-      </l-rectangle>
-    </l-map>
+      </l-rectangle> -->
+    </LMap>
   </div>
 </template>
 
-<script>
+<script setup>
 import {
   LMap,
   LIcon,
   LTileLayer,
   LMarker,
   LControlLayers,
-  LTooltip,
   LPopup,
   LPolyline,
   LPolygon,
   LRectangle,
 } from "@vue-leaflet/vue-leaflet";
 import "leaflet/dist/leaflet.css";
+import { useVehicleStore } from "../stores/vehicleStore";
+import { storeToRefs } from "pinia";
+import { computed, ref } from "vue";
+import GreenMarker from "./markers/GreenMarker.vue";
+import GrayMarker from "./markers/GrayMarker.vue";
+import RedMarker from "./markers/RedMarker.vue";
 
-export default {
-  components: {
-    LMap,
-    LIcon,
-    LTileLayer,
-    LMarker,
-    LControlLayers,
-    LTooltip,
-    LPopup,
-    LPolyline,
-    LPolygon,
-    LRectangle,
-  },
-  data() {
-    return {
-      zoom: 2,
-      iconWidth: 25,
-      iconHeight: 40,
-    };
-  },
-  computed: {
-  },
-  methods: {
-    log(a) {
-      console.log(a);
-    },
-    changeIcon() {
-      this.iconWidth += 2;
-      if (this.iconWidth > this.iconHeight) {
-        this.iconWidth = Math.floor(this.iconHeight / 2);
-      }
-    },
-  },
+const zoom = ref(8);
+
+const { getVehicles } = storeToRefs(useVehicleStore());
+
+const getCenterMap = computed(() => {
+ return getVehicles.value[0]?.location ? [getVehicles.value[0].location.lat, getVehicles.value[0].location.lng] : [0, 0]
+});
+const log = (event) => {
+  console.log(event);
 };
 </script>
+
+<style scoped>
+.leaflet-marker-icon.leaflet-div-icon.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+</style>
