@@ -17,4 +17,7 @@ import MapView from "../components/MapView.vue";
 import { ref } from "vue";
 
 const selectedVehicle = ref(null);
+const handleVehicleSelection = (vehicle) => {
+  selectedVehicle.value = vehicle;
+};
 </script>
