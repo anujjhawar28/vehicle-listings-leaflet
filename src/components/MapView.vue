@@ -13,9 +13,9 @@
           <GrayMarker v-else-if="vehicle.status === 'offline'" />
           <RedMarker v-else-if="vehicle.status === 'alert'" />
         </LIcon>
-        <l-popup class="w-full">
-          <div class="w-80 mr-6 flex items-center gap-8">
-            <div>
+        <LPopup class="w-full">
+          <div class="w-full flex items-center gap-2">
+            <div class="w-2/3">
               <span class="font-bold">Vehicle Name:</span>
               {{ vehicle.name }}
               <br />
@@ -39,26 +39,20 @@
             </div>
             <Button
               label="View History"
-              icon="pi pi-eye"
               size="small"
               severity="info"
-              variant=""
+              @click="vehicleHistory = vehicle"
             />
           </div>
-        </l-popup>
+        </LPopup>
       </LMarker>
-
-      <!-- <l-polyline
-        :lat-lngs="[
-          [47.334852, -1.509485],
-          [47.342596, -1.328731],
-          [47.241487, -1.190568],
-          [47.234787, -1.358337],
-        ]"
-        color="green"
-      ></l-polyline>
-       -->
     </LMap>
+    <VehicleHistoryModal
+      v-if="vehicleHistory"
+      :model-value="!!vehicleHistory"
+      :vehicle="vehicleHistory"
+      @update:model-value="vehicleHistory = null"
+    />
   </div>
 </template>
 
@@ -78,6 +72,7 @@ import GreenMarker from "./markers/GreenMarker.vue";
 import GrayMarker from "./markers/GrayMarker.vue";
 import RedMarker from "./markers/RedMarker.vue";
 import dayjs from "dayjs";
+import VehicleHistoryModal from "./VehicleHistoryModal.vue";
 
 const props = defineProps({
   selectedVehicle: {
@@ -87,6 +82,8 @@ const props = defineProps({
 });
 
 const zoom = ref(8);
+
+const vehicleHistory= ref(null);
 
 const { getVehicles } = storeToRefs(useVehicleStore());
 
