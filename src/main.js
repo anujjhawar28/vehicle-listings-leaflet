@@ -4,6 +4,7 @@ import { createPinia } from "pinia";
 import routes from "./routes/index.js";
 import Aura from "@primeuix/themes/aura";
 import "./style.css";
+import "leaflet/dist/leaflet.css";
 import App from "./App.vue";
 import { definePreset } from "@primeuix/themes";
 import registerComponents from "../registerComponents";

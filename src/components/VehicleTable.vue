@@ -25,8 +25,10 @@
         <template #grid="slotProps">
           <div
             class="p-col-12 md:p-col-4 lg:p-col-3 p-2 cursor-pointer border-x-2 border-b-2 border-gray-200 shadow-sm bg-gray-50"
+            :class="{'border-blue-500 bg-indigo-100': selectedVehicle && selectedVehicle.id === vehicle.id}"
             v-for="vehicle in slotProps.items"
             :key="slotProps.key"
+            @click="selectVehicle(vehicle)"
           >
             <div class="surface-card shadow-2 p-4 border-round">
               <div class="flex items-center gap-4 mb-2">
@@ -36,19 +38,20 @@
                   :severity="statusSeverity(vehicle.status)"
                 />
               </div>
-              <div class="mb-2 text-sm text-color-secondary">
-                Plate: <strong>{{ vehicle.plate }}</strong>
-              </div>
-              <div class="mb-2"></div>
-              <div class="text-sm mb-1">
-                <i class="pi pi-car mr-2"></i> Type: {{ vehicle.type }}
-              </div>
-              <div class="text-sm mb-1">
-                <i class="pi pi-map-marker mr-2"></i> {{ vehicle.lastLocation }}
-              </div>
-              <div class="text-sm text-color-secondary">
-                <i class="pi pi-clock mr-2"></i>
-                {{ formatDate(vehicle.lastUpdated) }}
+              <div class="grid grid-cols-2">
+                <div class="mb-2 text-sm text-color-secondary">
+                  Plate: <strong>{{ vehicle.plate }}</strong>
+                </div>
+                <div class="text-sm mb-1">
+                  <i class="pi pi-car mr-2"></i> Type: {{ vehicle.type }}
+                </div>
+                <div class="text-sm mb-1">
+                  <i class="pi pi-map-marker mr-2"></i> {{ vehicle.lastLocation }}
+                </div>
+                <div class="text-sm text-color-secondary">
+                  <i class="pi pi-clock mr-2"></i>
+                  {{ formatDate(vehicle.lastUpdated) }}
+                </div>
               </div>
             </div>
           </div>
@@ -73,7 +76,11 @@ const statuses = [
   { label: "Alert", value: "alert" },
 ];
 
+const emit = defineEmits(["vehicleSelected"]);
+
 const selectedStatus = ref({ label: "All", value: "all" });
+
+const selectedVehicle = ref(null);
 
 const statusSeverity = (status) => {
   return status === "online"
@@ -96,7 +103,16 @@ const filteredVehicles = computed(() => {
   });
 });
 
-const formatDate = (isoString) => dayjs(isoString).format("DD MMM YYYY, HH:mm");
+const formatDate = (isoString) => dayjs(isoString).format("DD MMM YYYY, HH:mm A");
+
+const selectVehicle = (vehicle) => {
+  if(vehicle.id === selectedVehicle.value?.id) {
+    selectedVehicle.value = null; // Deselect if already selected
+  } else {
+    selectedVehicle.value = vehicle;
+  }
+  emit("vehicleSelected", selectedVehicle.value);
+};
 </script>
 
 <style scoped>
