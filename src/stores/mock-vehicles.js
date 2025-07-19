@@ -11,12 +11,17 @@ export default [
     lastUpdated: "2025-07-02T10:30:00Z",
     lastLocation: "Sheikh Zayed Road, Dubai",
     history: [
-      { lat: 25.2100, lng: 55.2700, timestamp: "2025-07-02T08:00:00Z" },
-      { lat: 25.2200, lng: 55.2750, timestamp: "2025-07-02T08:30:00Z" },
-      { lat: 25.2500, lng: 55.2800, timestamp: "2025-07-02T09:00:00Z" },
-      { lat: 25.2700, lng: 55.2900, timestamp: "2025-07-02T09:30:00Z" },
-      { lat: 25.276987, lng: 55.296249, timestamp: "2025-07-02T10:30:00Z" }
-    ]
+      { lat: 25.2, lng: 55.27, timestamp: "2025-07-02T06:00:00Z" },
+      { lat: 25.215, lng: 55.275, timestamp: "2025-07-02T06:20:00Z" },
+      { lat: 25.225, lng: 55.278, timestamp: "2025-07-02T06:40:00Z" },
+      { lat: 25.235, lng: 55.28, timestamp: "2025-07-02T07:00:00Z" },
+      { lat: 25.245, lng: 55.285, timestamp: "2025-07-02T07:20:00Z" },
+      { lat: 25.255, lng: 55.29, timestamp: "2025-07-02T07:40:00Z" },
+      { lat: 25.265, lng: 55.295, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.275, lng: 55.3, timestamp: "2025-07-02T08:20:00Z" },
+      { lat: 25.285, lng: 55.305, timestamp: "2025-07-02T08:40:00Z" },
+      { lat: 25.295, lng: 55.31, timestamp: "2025-07-02T09:00:00Z" },
+    ],
   },
   {
     id: "v-002",
@@ -28,12 +33,17 @@ export default [
     lastUpdated: "2025-07-02T10:45:00Z",
     lastLocation: "Al Majaz, Sharjah",
     history: [
-      { lat: 25.3400, lng: 55.3900, timestamp: "2025-07-02T08:00:00Z" },
-      { lat: 25.3450, lng: 55.3950, timestamp: "2025-07-02T08:30:00Z" },
-      { lat: 25.3500, lng: 55.4000, timestamp: "2025-07-02T09:00:00Z" },
-      { lat: 25.3525, lng: 55.4020, timestamp: "2025-07-02T09:30:00Z" },
-      { lat: 25.3548, lng: 55.4048, timestamp: "2025-07-02T10:45:00Z" }
-    ]
+      { lat: 25.2, lng: 55.27, timestamp: "2025-07-02T06:00:00Z" },
+      { lat: 25.215, lng: 55.275, timestamp: "2025-07-02T06:20:00Z" },
+      { lat: 25.225, lng: 55.278, timestamp: "2025-07-02T06:40:00Z" },
+      { lat: 25.235, lng: 55.28, timestamp: "2025-07-02T07:00:00Z" },
+      { lat: 25.245, lng: 55.285, timestamp: "2025-07-02T07:20:00Z" },
+      { lat: 25.255, lng: 55.29, timestamp: "2025-07-02T07:40:00Z" },
+      { lat: 25.265, lng: 55.295, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.275, lng: 55.3, timestamp: "2025-07-02T08:20:00Z" },
+      { lat: 25.285, lng: 55.305, timestamp: "2025-07-02T08:40:00Z" },
+      { lat: 25.295, lng: 55.31, timestamp: "2025-07-02T09:00:00Z" },
+    ],
   },
   {
     id: "v-003",
@@ -45,12 +55,17 @@ export default [
     lastUpdated: "2025-07-01T22:00:00Z",
     lastLocation: "Abu Dhabi Downtown",
     history: [
-      { lat: 24.4400, lng: 54.3600, timestamp: "2025-07-01T18:00:00Z" },
-      { lat: 24.4450, lng: 54.3650, timestamp: "2025-07-01T19:00:00Z" },
-      { lat: 24.4485, lng: 54.3700, timestamp: "2025-07-01T20:00:00Z" },
-      { lat: 24.4510, lng: 54.3750, timestamp: "2025-07-01T21:00:00Z" },
-      { lat: 24.4539, lng: 54.3773, timestamp: "2025-07-01T22:00:00Z" }
-    ]
+      { lat: 25.2, lng: 55.27, timestamp: "2025-07-02T06:00:00Z" },
+      { lat: 25.215, lng: 55.275, timestamp: "2025-07-02T06:20:00Z" },
+      { lat: 25.225, lng: 55.278, timestamp: "2025-07-02T06:40:00Z" },
+      { lat: 25.235, lng: 55.28, timestamp: "2025-07-02T07:00:00Z" },
+      { lat: 25.245, lng: 55.285, timestamp: "2025-07-02T07:20:00Z" },
+      { lat: 25.255, lng: 55.29, timestamp: "2025-07-02T07:40:00Z" },
+      { lat: 25.265, lng: 55.295, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.275, lng: 55.3, timestamp: "2025-07-02T08:20:00Z" },
+      { lat: 25.285, lng: 55.305, timestamp: "2025-07-02T08:40:00Z" },
+      { lat: 25.295, lng: 55.31, timestamp: "2025-07-02T09:00:00Z" },
+    ],
   },
   {
     id: "v-004",
@@ -62,12 +77,12 @@ export default [
     lastUpdated: "2025-07-02T11:10:00Z",
     lastLocation: "Ajman Corniche",
     history: [
-      { lat: 25.3950, lng: 55.4300, timestamp: "2025-07-02T08:30:00Z" },
-      { lat: 25.3980, lng: 55.4350, timestamp: "2025-07-02T09:30:00Z" },
-      { lat: 25.4010, lng: 55.4380, timestamp: "2025-07-02T10:00:00Z" },
-      { lat: 25.4050, lng: 55.4420, timestamp: "2025-07-02T10:30:00Z" },
-      { lat: 25.4092, lng: 55.4445, timestamp: "2025-07-02T11:10:00Z" }
-    ]
+      { lat: 25.395, lng: 55.43, timestamp: "2025-07-02T08:30:00Z" },
+      { lat: 25.398, lng: 55.435, timestamp: "2025-07-02T09:30:00Z" },
+      { lat: 25.401, lng: 55.438, timestamp: "2025-07-02T10:00:00Z" },
+      { lat: 25.405, lng: 55.442, timestamp: "2025-07-02T10:30:00Z" },
+      { lat: 25.4092, lng: 55.4445, timestamp: "2025-07-02T11:10:00Z" },
+    ],
   },
   {
     id: "v-005",
@@ -79,14 +94,14 @@ export default [
     lastUpdated: "2025-07-01T20:00:00Z",
     lastLocation: "Hili, Al Ain",
     history: [
-      { lat: 24.1900, lng: 55.7200, timestamp: "2025-07-01T17:00:00Z" },
-      { lat: 24.1950, lng: 55.7250, timestamp: "2025-07-01T18:00:00Z" },
-      { lat: 24.2000, lng: 55.7300, timestamp: "2025-07-01T18:30:00Z" },
-      { lat: 24.2050, lng: 55.7400, timestamp: "2025-07-01T19:00:00Z" },
-      { lat: 24.2075, lng: 55.7447, timestamp: "2025-07-01T20:00:00Z" }
-    ]
+      { lat: 24.19, lng: 55.72, timestamp: "2025-07-01T17:00:00Z" },
+      { lat: 24.195, lng: 55.725, timestamp: "2025-07-01T18:00:00Z" },
+      { lat: 24.2, lng: 55.73, timestamp: "2025-07-01T18:30:00Z" },
+      { lat: 24.205, lng: 55.74, timestamp: "2025-07-01T19:00:00Z" },
+      { lat: 24.2075, lng: 55.7447, timestamp: "2025-07-01T20:00:00Z" },
+    ],
   },
-   {
+  {
     id: "v-006",
     name: "Tanker Gulf",
     plate: "TGR-111",
@@ -96,10 +111,10 @@ export default [
     lastUpdated: "2025-07-02T07:30:00Z",
     lastLocation: "Liwa Oasis",
     history: [
-      { lat: 23.6400, lng: 55.9000, timestamp: "2025-07-02T05:00:00Z" },
-      { lat: 23.6355, lng: 55.9200, timestamp: "2025-07-02T06:00:00Z" },
-      { lat: 23.6345, lng: 55.9311, timestamp: "2025-07-02T07:30:00Z" }
-    ]
+      { lat: 23.64, lng: 55.9, timestamp: "2025-07-02T05:00:00Z" },
+      { lat: 23.6355, lng: 55.92, timestamp: "2025-07-02T06:00:00Z" },
+      { lat: 23.6345, lng: 55.9311, timestamp: "2025-07-02T07:30:00Z" },
+    ],
   },
   {
     id: "v-007",
@@ -107,15 +122,15 @@ export default [
     plate: "CRA-552",
     status: "online",
     type: "Heavy Vehicle",
-    location: { lat: 25.6840, lng: 55.9511 },
+    location: { lat: 25.684, lng: 55.9511 },
     lastUpdated: "2025-07-02T11:00:00Z",
     lastLocation: "Dhaid, Sharjah",
     history: [
-      { lat: 25.6500, lng: 55.9200, timestamp: "2025-07-02T08:00:00Z" },
-      { lat: 25.6600, lng: 55.9300, timestamp: "2025-07-02T09:00:00Z" },
-      { lat: 25.6700, lng: 55.9400, timestamp: "2025-07-02T10:00:00Z" },
-      { lat: 25.6840, lng: 55.9511, timestamp: "2025-07-02T11:00:00Z" }
-    ]
+      { lat: 25.65, lng: 55.92, timestamp: "2025-07-02T08:00:00Z" },
+      { lat: 25.66, lng: 55.93, timestamp: "2025-07-02T09:00:00Z" },
+      { lat: 25.67, lng: 55.94, timestamp: "2025-07-02T10:00:00Z" },
+      { lat: 25.684, lng: 55.9511, timestamp: "2025-07-02T11:00:00Z" },
+    ],
   },
   {
     id: "v-008",
@@ -127,11 +142,11 @@ export default [
     lastUpdated: "2025-07-01T23:00:00Z",
     lastLocation: "Dibba, Fujairah",
     history: [
-      { lat: 25.9500, lng: 56.0200, timestamp: "2025-07-01T20:00:00Z" },
-      { lat: 26.0000, lng: 56.0500, timestamp: "2025-07-01T21:00:00Z" },
-      { lat: 26.0500, lng: 56.0700, timestamp: "2025-07-01T22:00:00Z" },
-      { lat: 26.1056, lng: 56.0889, timestamp: "2025-07-01T23:00:00Z" }
-    ]
+      { lat: 25.95, lng: 56.02, timestamp: "2025-07-01T20:00:00Z" },
+      { lat: 26.0, lng: 56.05, timestamp: "2025-07-01T21:00:00Z" },
+      { lat: 26.05, lng: 56.07, timestamp: "2025-07-01T22:00:00Z" },
+      { lat: 26.1056, lng: 56.0889, timestamp: "2025-07-01T23:00:00Z" },
+    ],
   },
   {
     id: "v-009",
@@ -143,10 +158,10 @@ export default [
     lastUpdated: "2025-07-02T06:15:00Z",
     lastLocation: "Ghantoot, Abu Dhabi",
     history: [
-      { lat: 24.9400, lng: 55.1000, timestamp: "2025-07-02T05:00:00Z" },
-      { lat: 24.9500, lng: 55.1100, timestamp: "2025-07-02T05:30:00Z" },
-      { lat: 24.9602, lng: 55.1188, timestamp: "2025-07-02T06:15:00Z" }
-    ]
+      { lat: 24.94, lng: 55.1, timestamp: "2025-07-02T05:00:00Z" },
+      { lat: 24.95, lng: 55.11, timestamp: "2025-07-02T05:30:00Z" },
+      { lat: 24.9602, lng: 55.1188, timestamp: "2025-07-02T06:15:00Z" },
+    ],
   },
   {
     id: "v-010",
@@ -154,13 +169,13 @@ export default [
     plate: "EMU-001",
     status: "alert",
     type: "Ambulance",
-    location: { lat: 24.8230, lng: 55.0132 },
+    location: { lat: 24.823, lng: 55.0132 },
     lastUpdated: "2025-07-02T04:45:00Z",
     lastLocation: "Ruwais, Abu Dhabi",
     history: [
-      { lat: 24.8000, lng: 55.0000, timestamp: "2025-07-02T03:00:00Z" },
-      { lat: 24.8100, lng: 55.0080, timestamp: "2025-07-02T03:45:00Z" },
-      { lat: 24.8230, lng: 55.0132, timestamp: "2025-07-02T04:45:00Z" }
-    ]
-  }
+      { lat: 24.8, lng: 55.0, timestamp: "2025-07-02T03:00:00Z" },
+      { lat: 24.81, lng: 55.008, timestamp: "2025-07-02T03:45:00Z" },
+      { lat: 24.823, lng: 55.0132, timestamp: "2025-07-02T04:45:00Z" },
+    ],
+  },
 ];

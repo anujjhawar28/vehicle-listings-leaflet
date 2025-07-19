@@ -4,7 +4,7 @@
     @update:visible="(vl) => $emit('update:modelValue', vl)"
     :header="vehicle?.name || 'Vehicle History'"
     modal
-    :style="{ width: '80vw'}"
+    :style="{ width: '80vw', height: '90vh' }"
   >
     <div class="mb-4 p-2 bg-gray-50 rounded">
       <div class="grid grid-cols-2 gap-2">
@@ -20,13 +20,19 @@
         <div>
           <strong>Last Updated:</strong> {{ formatDate(vehicle.lastUpdated) }}
         </div>
+        <div>
+          <strong>Distance Covered:</strong> {{ vehicle.routeStats.distanceKm }} KM
+        </div>
+        <div>
+          <strong>Average Speed:</strong> {{ vehicle.routeStats.avgSpeed }} KM/H
+        </div>
         <div class="col-span-2">
           <strong>Last Location:</strong> {{ vehicle.lastLocation }}
         </div>
       </div>
     </div>
 
-    <div style="height: 400px; width: 100%">
+    <div style="height: 65vh; width: 100%">
       <LMap :zoom="zoom" :center="mapCenter" style="height: 100%; width: 100%">
         <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 

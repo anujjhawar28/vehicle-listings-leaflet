@@ -1,6 +1,6 @@
 <template>
   <div style="height: 90vh; width: 50vw">
-    <LMap v-model="zoom" v-model:zoom="zoom" :center="getCenterMap">
+    <LMap v-model="zoom" :zoom="getZoom" :center="getCenterMap">
       <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <LControlLayers />
       <LMarker
@@ -82,6 +82,10 @@ const props = defineProps({
 });
 
 const zoom = ref(8);
+
+const getZoom = computed(() => {
+  return props.selectedVehicle ? 12 : 8;
+});
 
 const vehicleHistory= ref(null);
 
